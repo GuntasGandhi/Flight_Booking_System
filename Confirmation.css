@@ -1,0 +1,62 @@
+
+#bg-image 
+{
+  
+  width : 100%;
+  background-image : url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+#Table{
+  height: 320px;
+    position: absolute;
+    left: 520px;
+    top: 150px;
+    color: whitesmoke;
+    background :rgba(14, 1, 1, 0.596);
+    font-weight : bold;
+    opacity : 0.8;
+}
+
+tr td 
+{
+  padding : 10px;
+}
+
+#h1{
+  position : absolute;
+  top : 60px;
+  width : 100%;
+  color: white;
+  background: rgba(14, 1, 1, 0.699);
+  opacity : 0.6;
+  font-weight : bolder;
+  letter-spacing : 1px;
+  font-family: Azonix Regular;
+}
+
+#h1 h1
+{
+  text-align: center;
+  transition : 0.7s;
+}
+
+
+#h1 h1:hover 
+{
+  color : rgb(201, 193, 193);
+}
+
+#box{
+  height: 720px;
+  width: 100%;
+  background-image :url("ConfirmationBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}
+

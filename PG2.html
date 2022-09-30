@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>AstroHorizon Card Payment </title>
+
+    <style>
+        
+        #main {
+            height: 500px;
+            width: 600px;
+            margin-left: 32%;
+            margin-top: 8%;
+            border: 3px solid black;
+            background-color: rgb(133, 122, 122);
+            color : white;
+        }
+
+        #header {
+            height: 80px;
+            width: 100%;
+            background-color: black;
+            font-size: 40px;
+            color: white;
+            padding-top: 2%;
+        }
+
+        #header p
+        {
+            text-align : center;
+            font-family: Azonix Regular;
+            transition : 0.5s;
+        }
+
+        #header p:hover 
+        {
+            color : rgb(58, 196, 214);
+        }
+
+
+        #boxes {
+            margin-top: 115px;
+            height: 130px;
+            width: 494px;
+            border: 3px solid black;
+            background-color: white;
+        }
+
+        .col {
+            margin-top: -45px;
+            margin-left: 420px;
+        }
+
+        #main input
+        {
+            width : 90%;
+        }
+
+        #fieldarea 
+        {
+            position : relative;
+            left : 30px;
+        }
+
+    </style>
+
+</head>
+
+<body background="PaymentBG.jpg">
+
+    <div id="main">
+        <div id="header">
+            <p> <b>AstroHorizon</b> </p>
+        </div>
+        
+        <h2> &nbsp; Google Pay/Paytm </h2>
+        
+        <div class="col">
+
+            <div class="icon-container">&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-google" style="font-size:28px;color:black"></i>
+                <i class="fa fa-paypal" style="font-size:28px;color:black"></i>
+                <i class="fa fa-google-wallet" style="font-size:28px;color:black"></i>
+                <i class="fa fa-cc-paypal" style="font-size:28px;color:black"></i>
+            </div>
+
+        </div>
+
+        <br>
+    
+
+        <form action = "Confirmation Page/Confirmation Page.html">
+
+        <div id = "fieldarea">
+
+        <label for="fname">&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i> Full Name</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="text"  id="fname" name="firstname" placeholder="John M. Doe" class = "form-control" required><br><br>
+        
+        <label for="email">&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i>
+            Email</label>                                                                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="email2" class = "form-control" name="email" placeholder="john@example.com" required><br><br>
+
+        <label for="UpiId">&nbsp;&nbsp;&nbsp;<i class="fa fa-institution"></i> UPI Id</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input  type="text" id="upi" class = "form-control" min = "1" name="UpiId" placeholder="Eg. mobilenumber@upi" required><br><br>
+        
+        </div>
+        
+        <br><br><br><br>
+
+        <button type="submit" onclick="otp()" class="btn btn-success" style="margin-left: 84%;margin-top: -30%;"> Next </button>
+
+        </form>
+
+        <script>     
+
+        function otp() {
+
+        var filled;
+
+        function validateDetails()
+        {
+                
+        filled = Boolean(false);
+
+        var name = document.getElementById("fname").value;
+        var email = document.getElementById("email2").value;
+        var upi = document.getElementById("upi").value;
+
+        if (name.length != 0 && email.length != 0 && upi.length != 0)
+        {
+            filled = Boolean(true);
+        }
+
+        else 
+        {
+            if (name.length == 0)
+            {
+            alert("Fill in your Name");
+            }
+            if (email.length == 0)
+            {
+            alert("Fill in your Email");
+            }
+            if (upi.length == 0)
+            {
+            alert("Fill in your UPI ID");
+            }
+
+        }
+
+        
+        
+
+        }
+
+        function validateOtp(num) {
+            const re = /\d{3}-\d{3}$/;
+            var result = num.match(re);
+            if (result) {
+                alert("Confirmation details will be send to your mail id.");
+            }
+            else {
+                num = prompt("Enter OTP sent on email in XXX-XXX format: ");
+                validateOtp(num);
+            }
+        }
+
+        validateDetails();
+
+        if (filled)
+        {
+            const num = prompt("Enter OTP sent in XXX-XXX format");
+            validateOtp(num);
+        }
+        
+    }
+                
+            
+                
+        
+        </script>
+
+       
+
+</body>
+
+</html>
+

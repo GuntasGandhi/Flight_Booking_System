@@ -1,0 +1,677 @@
+body,html
+{
+    height : 100%;
+    margin : 0;
+}
+
+html 
+{
+  scroll-behavior: smooth;
+}
+
+.header
+{
+    width: 100%;
+    height: 290px;
+    opacity: 1.1;
+    background-image: linear-gradient(#252525ad, #82828280), url("BG-Image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    letter-spacing : 5px;
+    text-shadow: 0 0 15px rgb(15, 173, 212);
+}
+
+.header h1 
+{
+  position : relative;
+  top : 40px;
+}
+
+.header h2 
+{
+  position : relative;
+  top : 30px;
+}
+.header div h1,.header div h2
+{
+  transition : 0.5s;
+}
+
+.header div h1:hover,.header div h2:hover
+{
+  text-shadow : 0 0 8px rgb(15, 173, 212);
+}
+
+
+#navBar
+{
+  position : absolute;
+  left :0%;
+  top : 0%;
+  display : flex;;
+  height : 46px;
+  width : 100%;
+  box-shadow : 0 0 15px black;
+  background-color: black;
+}
+
+#navBar a 
+{
+  position :relative;
+  bottom : 0px;
+  color : white;
+  font-weight : bolder;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  padding-right : 20px;
+  letter-spacing : 0.7px;
+  text-decoration: none;
+  left: 900px;  
+  font-size : 17px;
+}
+
+#navBar a:hover 
+{
+  color :rgb(15, 173, 212);
+}
+
+#navBar h1
+{
+  position : absolute;
+  color : white;
+  left : 0px;
+  margin-left : 20px;
+  padding-bottom : 5px;
+  font-family: Momcake;
+  transition : 0.3s;
+}
+
+#navBar h1:hover 
+{
+  color :rgb(15, 173, 212);
+}
+
+
+.underline 
+{
+  position : relative;
+  left : 900px;
+  height : 2px;
+  width : 0px;
+  background-color : white;
+  transition : all 0.5s;
+}
+
+#navBar a:hover ~ .underline
+{
+  width : 80%;
+  background-color :rgb(15, 173, 212);
+}
+
+.mainheading
+{
+  height: 70px;
+  background-color : black;
+  width:100%;
+  margin-top: 0px;
+  text-align : center;
+  color : whitesmoke; 
+  letter-spacing : 1px;
+}
+
+.mainsubheading
+{
+  text-align : center;
+  color : whitesmoke;
+  letter-spacing : 1px;
+  position : relative;
+  top : 5px;
+  transition : 0.3s;
+  padding-top : 5px;
+}
+
+
+#AboutUsHeading h3:hover 
+{
+  color : orange;
+}
+
+#AboutUsBg{
+  height: 350px;
+  width: 100%;
+  background-image :url("AboutUs.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#space
+{
+  
+  height : 250px;
+  width : 90%;
+  transition : all 0.5s;
+  background: rgba(240, 240, 240, 0.8);
+}
+
+#space:hover 
+{
+  box-shadow : 0 0 10px black;
+}
+
+#space h3
+{
+  position : relative;
+  left : 50px;
+  top : 20px;
+  color : black;
+  font-weight : bolder;
+  letter-spacing : 1px;
+  transition : all 0.3s;
+}
+
+#space h3:hover
+{
+  letter-spacing : 3px;
+}
+
+#space img 
+{
+  position : relative;
+  left : 80%;
+  top : -90%;
+  height : 300px;
+  width : 300px;
+  transition : all 0.3s;
+}
+
+#space img:hover 
+{
+  transform : scale(1.2,1.2);
+}
+
+#space p
+{
+  position : relative;
+  left : 20px;
+  top : 15px;
+  color: black;
+  font-weight : bolder;
+  letter-spacing : 0.3px;
+}
+
+#slideshowbg 
+{
+  background-image : url('cloud.jpg');
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  width : 100%;
+  height : 700px;
+}
+
+
+
+#gallery h3:hover 
+{
+  color : green;
+}
+
+
+.slidershow{
+  width: 90%;
+  height: 500px;
+  overflow: hidden;
+  box-shadow : 0 0 25px rgb(11, 43, 43);
+  transition : all 0.5s;
+}
+
+.slidershow:hover 
+{
+  box-shadow : 0 0 10px rgb(10, 37, 37);
+}
+
+
+.middle{
+  position: relative;
+  margin-top: 20%;
+  left: 50%;
+  margin-bottom: 10%;
+  transform: translate(-50%,-50%);
+ }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(236, 234, 234, 0.699);
+  color:black;
+}
+.bar{
+  width: 100px;
+  height: 30px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  color:white;
+  text-align: center;
+  border-radius: 10%;
+  background:black;
+}
+.bar:hover{
+  background: #fff;
+  color: black;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  
+}
+
+.image {
+  display: block;
+  width: 300px;
+  height: 200px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  margin-left: 0px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #236569;
+}
+
+.container:hover .overlay {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+      .icon-bar {
+        position: fixed;
+        top: 50%;
+        left: 97%;
+        transform: translateY(-80%);
+      }
+      
+      .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+      }
+
+      
+      
+    
+      
+      .facebook {
+        background-color: #3B5998;
+        color: white;
+      }
+
+      .facebook:hover 
+      {
+        background-color : darkblue;
+      }
+      
+      .twitter {
+        background-color: #55ACEE;
+        color: white;
+      }
+      
+      .twitter:hover 
+      {
+        background-color : #3c81b6;
+      }
+
+      .gmail {
+        background-color: #dd4b39;
+        color: white;
+      }
+
+      .gmail:hover 
+      {
+        background-color: #b64435
+      }
+      
+      .linkedin {
+        background-color: #007bb5;
+        color: white;
+      }
+      
+      .linkedin:hover 
+      {
+        background-color: #05567c;
+      }
+      
+      .youtube {
+        background-color: #bb0000;
+        color: white;
+      }
+
+      .youtube:hover 
+      {
+        background-color: #8d0707;
+      }
+      
+      .content {
+        margin-left: 75px;
+        font-size: 30px;
+      }
+
+      .facebook:hover,.twitter:hover,.gmail:hover,.linkedin:hover,.youtube:hover 
+      {
+        transform: scale(1.1,1.1);
+        transform : rotate(25deg);
+      }
+      
+
+#BestOffers h3:hover 
+{
+  color : yellow;
+}
+
+.zigzagLeft{
+  width:370px;
+  margin-top:20px;
+  margin-left:200px; 
+  height:  200px;
+  position: relative;
+  transition : all 0.3s;
+  box-shadow : 0 0 15px black;
+}
+
+
+.zigzagLeft img,.zigzagLeft div 
+{
+  width : 370px;
+
+}
+.zigzagRight{
+  width:370px; 
+  margin-top: 0px; 
+  margin-left:900px;
+  height:  200px;
+  position: relative;
+  transition : all 0.3s;
+  box-shadow : 0 0 15px black;
+}
+
+
+
+.zigzagRight img,.zigzagRight div 
+{
+  width : 370px;
+}
+
+
+
+
+
+.zigzagRight:hover .overlay  {
+  opacity: 0.6;
+  
+}
+.zigzagLeft:hover .overlay {
+  opacity: 0.6;
+}
+
+#zigzagLeftFirst{
+  width:370px;
+  margin-top: 100px;
+  margin-left:200px;
+  padding-left: 0px;
+  padding-top: 10px;
+  height:  200px;
+  position: relative;
+  transition : all 0.3s;
+  box-shadow : 0 0 15px black;
+}
+
+
+#zigzagLeftFirst div, #zigzagLeftFirst img 
+{
+  width : 370px;
+}
+
+#zigzagLeftFirst:hover .overlay
+{
+  margin-top: 10px;
+  opacity : 0.6;
+}
+
+.zigzagLeft:hover,.zigzagRight:hover,#zigzagLeftFirst:hover 
+{
+  box-shadow : 0 0 5px solid black;
+}
+
+
+#planejourney 
+{
+  height : 1100px;
+  width : 5px;
+  position : relative;
+  left : 730px;
+  top : -1000px;
+  background-color : white;
+}
+
+
+
+#planeslider
+{
+  font-size : 35px;
+  color : #000080;
+  position : sticky;
+  top : 2%;
+} 
+
+#planeslider img 
+{
+  position : relative;
+  left : -30px;
+  
+}
+
+#offerlayer 
+{
+  background: rgba(240, 240, 240, 0.4);
+  
+  height : 1200px;
+  width : 90%;
+  margin-left : 3%;
+  box-shadow : 0 0 25px black;
+  transition : all 0.5s;
+}
+
+#offerlayer:hover 
+{
+  box-shadow : 0 0 15px black;
+}
+#BestOffersBg{
+    height: 1470px;
+    width: 100%;
+    background-image :url("mountains.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#ticketbooking h3:hover 
+{
+  color : red;
+}
+
+
+#mainform 
+{
+  background-image: url('rockies.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+#mainform table tr td
+{
+ padding-left : 100px;
+}
+
+
+#mainform label
+{
+  color : white;
+  font-weight: bold;
+  font-size : 20px;
+}
+
+#mainform button 
+{
+  font-size : 20px;
+}
+
+
+#contactus h3:hover 
+{
+  color : #00BFFF;
+}
+
+#contactusMain
+{
+  height : 70%;
+  width : 100%;
+  background-color : rgb(80, 67, 67);
+}
+
+#contactusTable
+{
+  position : relative;
+  left : 350px;
+  top : 100px;
+}
+
+.column
+{
+  color : white;
+  font-size : 25px;
+  font-weight: bold;
+  padding-bottom : 20px;
+  padding-top : 20px;
+}
+
+.inputfield 
+{
+  color : grey;
+  font-weight: bold;
+  font-size : 20px;
+  transition : 0.5s;
+}
+
+.inputfield:focus 
+{
+  width : 350px;
+}
+
+.tabellabel 
+{
+  transition : 0.5s;
+}
+
+.tabellabel:hover 
+{
+  transform : scale(1);
+}
+
+.tabellabel:hover .labelunderline
+{
+  width : 100px;
+}
+
+.labelunderline 
+{
+  margin-top : 5px;
+  height : 3px;
+  width : 0px;
+  background-color : white;
+  transition : 0.5s;
+}
+
+#tablesubmitbtn 
+{
+  font-size : 20px;
+  margin-top : 15px;
+}
+
+#querydiv 
+{
+  position : relative;
+  height : 500px;
+  width : 500px;
+  left : 900px;
+  bottom : 280px;
+  color : rgb(240, 240, 240);
+}
+#copyright
+{
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding:20px;
+}
+
+
+
+

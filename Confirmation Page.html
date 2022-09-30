@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = Confirmation.css>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Confirmation Page</title>
+
+</head>
+
+<body>
+
+    <div id = "bg-image">
+
+    <div id="box">
+
+    <div id="h1">
+
+        <h1> <b> THANK YOU FOR TRAVELLING WITH ASTROHORIZON! </b> </h1>
+
+    </div>
+
+    <div id="Table">
+        <i class="fa-li fa fa-check-square" style="font-size:50px;margin-left: 270px;"></i><br><br><br>
+        <h4 style="margin-left: 130px;">Congratulation !!</h4>
+        <p>&nbsp;&nbsp;Your ticket is successfully booked. Further details will be<br>&nbsp;&nbsp;shared on your Email. Thanks for travelling with us. If
+            <br>&nbsp;&nbsp;you have any enquiry related to flight and ticket booking <br>&nbsp; feel free to contact us. Happy and safe journey from team
+            <br>&nbsp;&nbsp;<b>AstroHorizon.</b></p>
+            
+    <table border="4">
+
+        <tr>
+            <td style="height:50px;width:100px" >
+                Ticket Number
+            </td>
+            <td style="height:50px;width:350px" >
+                <p id="t1"></p>
+            </td>
+    </table>
+    
+    </div>
+
+    </div>
+    </div>
+    <script src = "MainJS.js"> </script>
+    <script>
+        var x = document.getElementById("t1")
+         x.innerHTML = Math.floor((Math.random() * 50000000) + 1000000);
+         var y = document.getElementById("t2")
+    </script>
+</body>
+
+</html>
